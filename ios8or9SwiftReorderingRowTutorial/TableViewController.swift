@@ -87,6 +87,10 @@ class TableViewController: UITableViewController {
         
         print("\(objectArray)")
     }
+    
+    override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
+    
+    }
  
     /*
      // Override to support conditional editing of the table view.
