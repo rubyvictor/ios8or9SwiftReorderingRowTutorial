@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
         self.editing = !self.editing
     }
     
-    var tableData: [String : [String]] = ["First": ["One", "Two"], "Second": ["Three", "Four", "Five"], "Third":["Six", "Seven"]]
+    var tableData: [String : [String]] = ["First": ["Apples", "Oranges"], "Second": ["Milk", "Flour", "Eggs"], "Third":["Pepsi", "Coke"]]
 
     
     struct Objects {
