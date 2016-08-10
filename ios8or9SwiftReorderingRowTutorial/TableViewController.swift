@@ -77,15 +77,15 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return objectArray[section].sectionName
     }
-    
+    //put in also, move data from one cell to another cell to another section. test by moving one cell, then reload data in tableview if updated.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
         
-        let itemMove: String = objectArray[fromIndexPath.section].sectionObjects[fromIndexPath.row]
+        let itemMove = objectArray[fromIndexPath.row]
         
         objectArray.removeAtIndex(fromIndexPath.section)
-        objectArray.removeAtIndex(fromIndexPath.row)
-        objectArray.insert(itemMove, atIndex: toIndexPath.indexAtPosition(section))
-        objectArray.insert(itemMove: atIndex: toIndexPath.row)
+        objectArray.insert(itemMove, atIndex: toIndexPath.row)
+        
+        print("\(objectArray)")
     }
  
     /*
