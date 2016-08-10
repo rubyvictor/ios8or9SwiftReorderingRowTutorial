@@ -80,17 +80,25 @@ class TableViewController: UITableViewController {
     //put in also, move data from one cell to another cell to another section. test by moving one cell, then reload data in tableview if updated.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
         
-        let itemMove = objectArray[fromIndexPath.row]
-        
-        objectArray.removeAtIndex(fromIndexPath.section)
-        objectArray.insert(itemMove, atIndex: toIndexPath.row)
+        let itemMove = objectArray.removeAtIndex(fromIndexPath.section).sectionObjects[fromIndexPath.row]
+ 
+        objectArray.insert(itemMove, atIndex: toIndexPath.section)
         
         print("\(objectArray)")
     }
     
-    override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
-    
-    }
+//    override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath: NSIndexPath, toProposedIndexPath: NSIndexPath) -> NSIndexPath {
+//        
+//        let itemMove = objectArray[targetIndexPathForMoveFromRowAtIndexPath.section].sectionObjects[targetIndexPathForMoveFromRowAtIndexPath.row]
+//        
+//        
+//        
+//        objectArray.removeAtIndex(targetIndexPathForMoveFromRowAtIndexPath.section).sectionObjects[targetIndexPathForMoveFromRowAtIndexPath.row]
+//        
+//        
+//        objectArray.insert(itemMove, atIndex: toProposedIndexPath.section)
+//        return toProposedIndexPath
+//    }
  
     /*
      // Override to support conditional editing of the table view.
