@@ -1,0 +1,1 @@
+Reordering rows across multiple sections in a UITableView. Based on dictionary which contains an array of items. The challenge is to update the data model everytime a row is moved from section to section.
